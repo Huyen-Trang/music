@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBackgroundColor"
+    tools:context="player.project.com.musicplayer.Fragments.SearchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/inputSearch"
+                android:layout_width="fill_parent"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:hint="Search..." />
+            <TextView
+                android:background="@color/white"
+                android:text="Songs"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/fragment_search_tv_song_padding_left"
+                android:textAlignment="textStart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_search_tv_song_layout_height" />
+            </LinearLayout>
+            <ListView
+                android:id="@+id/lv_songs_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
